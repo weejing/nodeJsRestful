@@ -11,9 +11,15 @@ var Product = require('../models/product');
 //Product.methods(['get','put','post', 'delete']);
 //Product.register(router,'/products')
 
-router.get('/products', function(req,res){
-	Product.find(function (err, data){
-		res.json(data);
+router.get('/products/:name/:skul/:price', function(req,res){
+	var Product1 = new Product();
+	Product1.name = req.params.name;
+	Product1.skul = req.params.skul;
+	Product1.price = req.params.price;
+
+	Product1.save(function(err) {
+		if(err)
+			res.err;
 	});
 });
 
