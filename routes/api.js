@@ -19,7 +19,7 @@ router.get('/products/:name/:skul/:price', function(req,res){
 
 	Product1.save(function(err) {
 		if(err)
-			res.err;
+			console.log(err.stack);
 	});
 });
 
