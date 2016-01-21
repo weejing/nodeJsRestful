@@ -23,6 +23,12 @@ router.get('/Products/:name/:skul/:price', function(req,res){
 	});
 });
 
+router.get('/Products', function (req,res){
+	Product.find(function(err,data) {
+		res.json(data);
+	})
+})
+
 
 // return router
 module.exports = router;
