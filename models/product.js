@@ -8,7 +8,7 @@ var mongoose = restful.mongoose;
 var productSchema = new mongoose.Schema({
 	name: String,
 	sku: String,
-	price: Number
+	price: String
 });
 
 // Return Model
