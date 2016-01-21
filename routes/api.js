@@ -8,16 +8,15 @@ var router = express.Router();
 var Product = require('../models/product');
 
 // Routes
-//Product.methods(['get','put','post', 'delete']);
-//Product.register(router,'/products')
+Product.methods(['get','put','post', 'delete']);
+Product.register(router,'/products')
 
-app.get('/products', function(req,res){
+/*app.get('/products', function(req,res){
 	Product.find(function (err, data){
 		res.json(data);
 	});
-
 });
-
+*/
 
 // return router
 module.exports = router;
