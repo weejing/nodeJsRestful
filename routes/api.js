@@ -8,8 +8,8 @@ var router = express.Router();
 var Product = require('../models/product');
 
 // Routes
-//Product.methods(['get','put','post', 'delete']);
-//Product.register(router,'/products')
+
+
 
 router.get('/Products/:name/:skul/:price', function(req,res){
 	var Product1 = new Product();
