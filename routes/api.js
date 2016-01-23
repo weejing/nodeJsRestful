@@ -9,7 +9,7 @@ var Product = require('../models/product');
 
 // Routes
 
-
+router.use ('/login', require('./routes/login'));
 
 router.get('/Products/:name/:skul/:price', function(req,res){
 	var Product1 = new Product();
